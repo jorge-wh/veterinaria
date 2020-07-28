@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+
+    <!--En caso de querer realizar pruebas para guardar datos -->
+    <form method="post">
+        {% csrf_token %}
+
+            <div class="form-group">
+                <label for="form.nombre.name">{{form.nombre.label}}</label>
+                {{form.nombre}}
+            </div>
+        <button type="submit">Guardar</button> 
+    </form>
+
+    <!-- Una forma de traer el formulario 
+        {{ form.as_p }}
+    -->
+
+{% endblock %}
